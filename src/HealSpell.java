@@ -8,14 +8,14 @@
  *
  * @author nick
  */
-public class AttackSpell extends Spell{
+public class HealSpell extends Spell{
 
-    public AttackSpell(String name, int power) {
+    public HealSpell(String name, int power) {
         super(name, power);
     }
-
+    
     public void levelUp(){
-        this.power += 1;
+        this.power += 2;
     }
     
 }

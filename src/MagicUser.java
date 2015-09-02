@@ -8,14 +8,8 @@
  *
  * @author nick
  */
-public class AttackSpell extends Spell{
+public abstract class MagicUser implements EnlightenedBeing{
+  
+    public abstract void castSpell(int spell, Being b);
 
-    public AttackSpell(String name, int power) {
-        super(name, power);
-    }
-
-    public void levelUp(){
-        this.power += 1;
-    }
-    
 }

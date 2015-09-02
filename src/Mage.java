@@ -8,15 +8,15 @@
  *
  * @author nick
  */
-public class Mage extends magicUser{
+public class Mage extends MagicUser{
     private int health;
     private int attack;
     private int mana;
     private double block;
     private String Name;
-    private spell[] spellBook = new spell[5];
+    private Spell[] spellBook = new Spell[5];
     AttackSpell fireball = new AttackSpell("Fireball",6);
-    healSpell lesserHeal = new healSpell("lesser Heal",2);
+    HealSpell lesserHeal = new HealSpell("lesser Heal",2);
     public Mage(String Name) {
         this.Name=Name;
         health = 50;
@@ -44,7 +44,7 @@ public class Mage extends magicUser{
  
     @Override
     public void castSpell(int magic, Being b){
-        spell spell = spellBook[magic];
+        Spell spell = spellBook[magic];
         System.out.println(this.Name + " cast " + spell.getName() + " at " + b.getName());
         spell.cast(b);
     }
