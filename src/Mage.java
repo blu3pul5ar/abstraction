@@ -34,6 +34,7 @@ public class Mage extends magicUser{
  
     @Override
     public void castSpell(int spell, Being b) {
+        System.out.println("Nick casts fireball at John!");
         spellBook[spell].cast(b);
     }
 
