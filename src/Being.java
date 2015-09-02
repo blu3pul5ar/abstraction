@@ -9,6 +9,8 @@
  * @author nick
  */
 public interface Being {
+    public void setName(String n);
+    public String getName();
     public void setHealth(int b);
     public int getHealth();
     public void attack(Being b);

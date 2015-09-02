@@ -9,16 +9,26 @@
  * @author nick
  */
 public class Mage extends magicUser{
+    private int health;
+    private int attack;
+    private int mana;
+    private double block;
+    private String Name;
+    private spell[] spellBook = new spell[5];
+    AttackSpell fireball = new AttackSpell("Fireball",6);
+    healSpell lesserHeal = new healSpell("lesser Heal",2);
+    public Mage(String Name) {
+        this.Name=Name;
+        health = 50;
+        attack = 10;
+        mana = 100;
+        block = .05;
+        spellBook[0]=fireball;
+        spellBook[1]= lesserHeal;
+    }
 
-   
-    private int health = 50;
-    private int attack = 10;
-    private int mana = 100;
-    private double block = .05;
-    AttackSpell fireball = new AttackSpell(6);
-    healSpell lesserHeal = new healSpell(2);
-    public spell[] spellBook ={fireball,lesserHeal};
-   
+    
+
     
     
     @Override
@@ -33,9 +43,10 @@ public class Mage extends magicUser{
 
  
     @Override
-    public void castSpell(int spell, Being b) {
-        System.out.println("Nick casts fireball at John!");
-        spellBook[spell].cast(b);
+    public void castSpell(int magic, Being b){
+        spell spell = spellBook[magic];
+        System.out.println(this.Name + " cast " + spell.getName() + " at " + b.getName());
+        spell.cast(b);
     }
 
     @Override
@@ -75,6 +86,14 @@ public class Mage extends magicUser{
     }
     public void takeDamage(int d) {
         this.health -= d;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
     }
     
 }

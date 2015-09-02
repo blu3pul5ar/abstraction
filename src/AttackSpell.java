@@ -9,20 +9,11 @@
  * @author nick
  */
 public class AttackSpell extends spell{
-    private int power;
 
-    public int getPower() {
-        return power;
+    public AttackSpell(String name, int power) {
+        super(name, power);
     }
 
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public AttackSpell(int power) {
-        this.power = power;
-    }
-    
     public void levelUp(){
         this.power += 1;
     }
