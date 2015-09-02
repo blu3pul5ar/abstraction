@@ -11,17 +11,4 @@
 public interface EnlightenedBeing extends Being{
     public void setMana(int m);
     public int getMana();
-
-    @Override
-    public void setHealth(int b);
-
-    @Override
-    public int getHealth();
-
-    @Override
-    public void attack(Being b);
-  
-    @Override
-    public boolean block();
-    
 }
