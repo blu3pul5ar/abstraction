@@ -8,6 +8,7 @@
  *
  * @author nick
  */
+
 public interface Being {
     public void setName(String n);
     public String getName();

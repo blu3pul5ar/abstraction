@@ -14,22 +14,19 @@ public class Mage extends MagicUser{
     private int mana;
     private double block;
     private String Name;
-    private Spell[] spellBook = new Spell[5];
-    AttackSpell fireball = new AttackSpell("Fireball",6);
-    HealSpell lesserHeal = new HealSpell("lesser Heal",2);
+    private Spell[] spellBook = new Spell[4];
+    private AttackSpell ArcaneBolt = new AttackSpell("ArcaneBolt",5,0);
+    private HealSpell lesserHeal = new HealSpell("LesserHeal",5,0);
     public Mage(String Name) {
         this.Name=Name;
         health = 50;
         attack = 10;
         mana = 100;
         block = .05;
-        spellBook[0]=fireball;
+        spellBook[0]=ArcaneBolt;
         spellBook[1]= lesserHeal;
     }
 
-    
-
-    
     
     @Override
     public void attack(Being b) {

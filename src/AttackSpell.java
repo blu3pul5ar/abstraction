@@ -13,9 +13,12 @@ public class AttackSpell extends Spell{
     public AttackSpell(String name, int power) {
         super(name, power);
     }
-
+    public AttackSpell(String name, int power,int cost) {
+        super(name, power);
+        this.setCost(cost);
+    }
     public void levelUp(){
-        this.power += 1;
+        this.setPower(this.getPower()+5);
     }
     
 }
