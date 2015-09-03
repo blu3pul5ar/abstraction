@@ -7,7 +7,7 @@
 /**
  *
  * @author nick
- */
+ */ 
 public class Mage extends MagicUser{
     private int health;
     private int attack;

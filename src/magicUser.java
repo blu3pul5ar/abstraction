@@ -8,7 +8,7 @@
  *
  * @author nick
  */
-public abstract class magicUser implements EnlightenedBeing{
+public abstract class MagicUser implements EnlightenedBeing{
   
     public abstract void castSpell(int spell, Being b);
 
